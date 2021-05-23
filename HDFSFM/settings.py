@@ -25,7 +25,7 @@ SECRET_KEY = ')ilvt)t5&e8n^u3q+*4qzcx9#s15$$8j%z0@2um50j%(1$7cv*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ['HADOOP_HOST']]
 
 
 # Application definition
@@ -44,10 +44,10 @@ INSTALLED_APPS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-HADOOP_HOME = "/usr/local/hadoop/hadoop-2.7.2/bin/" # HADOOP SOURCE
-HADOOP_USERNAME = "ENTER_HADOOP_USERNAME_"
-HADOOP_PASSWORD = "ENTER_HADOOP_PASSWORD"
-HADOOP_MASTER_ADDRESS = "localhost:50070" # HADOOP ADDRESS
+HADOOP_HOME = os.environ['HADOOP_HOME']
+HADOOP_USERNAME = os.environ['HADOOP_USERNAME']
+HADOOP_PASSWORD = ""
+HADOOP_MASTER_ADDRESS = os.environ['HADOOP_MASTER']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
