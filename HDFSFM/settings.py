@@ -25,7 +25,7 @@ SECRET_KEY = ')ilvt)t5&e8n^u3q+*4qzcx9#s15$$8j%z0@2um50j%(1$7cv*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ['HADOOP_HOST']]
+ALLOWED_HOSTS = [os.environ['HADOOP_HOST'],'localhost']
 
 
 # Application definition
